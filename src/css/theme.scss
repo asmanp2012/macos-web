@@ -96,3 +96,12 @@ body.dark {
   --system-color-light-contrast: hsl(240, 24%, 100%);
   --system-color-light-contrast-hsl: 240, 24%, 100%;
 }
+
+html[dir="rtl"] body {
+  --system-font-family: var(--font-vazirmatn), -apple-system, BlinkMacSystemFont, 'Inter', 'Helvetica Neue', 'Helvetica',
+  'Arial', sans-serif;
+}
+
+html[dir="rtl"] #windows-area {
+  direction: ltr;
+}

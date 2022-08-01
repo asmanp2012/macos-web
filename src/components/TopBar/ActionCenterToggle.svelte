@@ -28,7 +28,7 @@
   </button>
 
   {#if visible}
-    <div in:fadeIn out:fadeOut class="menu-parent" use:elevation={'menubar-menu-parent'}>
+    <div in:fadeIn out:fadeOut class="menu-parent {document.dir === 'rtl' ? 'rtl' : ''}"  use:elevation={'menubar-menu-parent'}>
       <ActionCenter bind:isThemeWarningDialogOpen />
     </div>
   {/if}
@@ -105,12 +105,17 @@
       position: relative;
     }
   }
-
+  
   .menu-parent {
     z-index: 1;
     position: absolute;
     right: 1rem;
     margin-top: 7px;
+  }
+
+  .menu-parent.rtl {
+    right: auto !important;
+    left: 1rem;
   }
 
   .theme-warning-section {
